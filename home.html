@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href= "{{url_for('static',filename='/styles/mystyle.css')}}" />
+</head>
+<header>
+    <div class="text-box">
+    <h1 id="title">SALES FORECASTING</h1><hr>
+    </div>
+    </header>
+<div class="container">
+    <form id="survey-form" name="passdata" action="{{ url_for('predict') }}" method="post">
+        <h3> Please Enter The Details:</h3>
+        <div class = "labels">
+            <label id = "date-label" for="Date">Enter The Date:</label>
+        </div>
+        <div class="input-tab">
+            <input class ="input-field" type="date" id="date" name="Date"   placeholder="Enter the date" required>
+        </div>
+        <div class = "labels">
+            <label id = "number-label" for="Product ID">Enter The Product ID:</label>
+        </div>
+        <div class="input-tab">
+            <input class ="input-field" type="number" id="product ID" name="product ID" min="1" max="33" placeholder="Enter the number" required>
+        </div>
+        <div class = "labels">
+            <label id = "number-label" for=" n_samples_per_day">Enter number of samples:</label>
+        </div>
+        <div class="input-tab">
+            <input class ="input-field" type="number" id="n_samples_per_day" name="n_samples_per_day"  placeholder="Enter the number" required>
+        </div>
+
+        <div class ="btn">
+            <button id ="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<footer>
+    <p>           &copy 2023 
+
+    </a>
+</p>
+</footer>
